@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Contato com Validação</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        background-color: rgb(106, 170, 210);
+        max-width: 500px;
+        margin: 50px auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      input,
+      textarea,
+      button {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 100%;
+      }
+
+      button {
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="titulo">
+        <h1>Formulário de Contato</h1>
+      </div>
+      <form onsubmit="return validarFormulario()">
+        <input type="text" name="nome" placeholder="Nome" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea
+          name="mensagem"
+          placeholder="Sua mensagem..."
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <h5>Matrícula 202408347324</h5>
+    </section>
+
+    <script>
+      function validarFormulario() {
+        const nome = document.forms[0]["nome"].value.trim();
+        const email = document.forms[0]["email"].value.trim();
+        const mensagem = document.forms[0]["mensagem"].value.trim();
+
+        if (!nome || !email || !mensagem) {
+          alert("Por favor, preencha todos os campos.");
+          return false;
+        }
+        alert("Mensagem enviada com sucesso!");
+        return true;
+      }
+    </script>
+  </body>
+</html>
