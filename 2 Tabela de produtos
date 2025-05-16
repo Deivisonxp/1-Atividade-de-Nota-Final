@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabela de Produtos</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 40px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: white;
+      }
+
+      thead {
+        background-color: #368aab;
+        color: white;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #c1d9dd;
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: #edf6f7;
+      }
+
+      tbody tr:hover {
+        background-color: #2b4ccd;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center">Tabela de Produtos</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Preço</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Notebook Dell</td>
+          <td>R$ 3.500,00</td>
+          <td>Notebook com 16GB RAM e SSD 512GB</td>
+        </tr>
+        <tr>
+          <td>Smartphone Samsung</td>
+          <td>R$ 2.000,00</td>
+          <td>Celular com câmera tripla e 128GB de armazenamento</td>
+        </tr>
+        <tr>
+          <td>Fone Bluetooth</td>
+          <td>R$ 150,00</td>
+          <td>Fone sem fio com cancelamento de ruído</td>
+        </tr>
+        <tr>
+          <td>Cadeira Gamer</td>
+          <td>R$ 850,00</td>
+          <td>Cadeira ergonômica com ajustes completos</td>
+        </tr>
+        <tr>
+          <td>Teclado Mecânico</td>
+          <td>R$ 300,00</td>
+          <td>Teclado RGB com switches azuis</td>
+        </tr>
+      </tbody>
+    </table>
+    <h5>
+      Matrícula <br />
+      202408347324
+    </h5>
+  </body>
+</html>
