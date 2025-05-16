@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMC Simples</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #eef;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      section {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+      }
+
+      input {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 10px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .resposta {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Calculadora de IMC</h1>
+      <input type="number" id="peso" placeholder="Peso (kg)" step="0.1" />
+      <input type="number" id="altura" placeholder="Altura (m)" step="0.01" />
+      <button onclick="calcularIMC()">Calcular</button>
+      <div class="resposta" id="resposta"></div>
+    </section>
+
+    <script>
+      function calcularIMC() {
+        const peso = parseFloat(document.getElementById("peso").value);
+        const altura = parseFloat(document.getElementById("altura").value);
+        const resposta = document.getElementById("resposta");
+
+        if (peso > 0 && altura > 0) {
+          const imc = peso / (altura * altura);
+          resposta.textContent = `Seu IMC é: ${imc.toFixed(2)}`;
+        } else {
+          resposta.textContent = "Preencha os valores corretamente.";
+        }
+      }
+    </script>
+  </body>
+</html>
